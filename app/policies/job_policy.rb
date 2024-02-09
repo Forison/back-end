@@ -9,7 +9,7 @@ class JobPolicy
   end
 
   def create?
-    user_signed_in?
+    @user ? true : false
   end
 
   def like_job?

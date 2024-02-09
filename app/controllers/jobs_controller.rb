@@ -12,8 +12,7 @@ class JobsController < ApplicationController
   end
 
   def create
-    current_user.jobs.build(job_params)
-    # job = Job.new(job_params)
+    job = current_user.jobs.build(job_params)
     authorize job
     job.save!
     response = JobService.new(job, 'Job')
@@ -31,6 +30,6 @@ class JobsController < ApplicationController
   private
 
   def job_params
-    params.require(:job).permit(:id, :name, :description, :location, :logo, :poster, :like)
+    params.require(:job).permit(:id, :name, :description, :location, :logo, :poster, :like, :user_id)
   end
 end

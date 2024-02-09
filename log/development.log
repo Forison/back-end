@@ -2231,3 +2231,340 @@ Migrating to AddLikeToJobs (20240209043321)
   [1m[36mTRANSACTION (39.6ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (11.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(3190432722120052185)[0m
   [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/signup" for 127.0.0.1 at 2024-02-09 07:13:08 +0000
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"name"=>"addo1", "email"=>"addo@gmail.com", "password"=>"[FILTERED]"}, "registration"=>{"user"=>{"name"=>"addo1", "email"=>"addo@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (43.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "addo@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "jti") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "addo@gmail.com"], ["encrypted_password", "$2a$12$g91B9k7obsaytM8wBhwhduXZpsrwOpGiEhWSwSx3sri8Mt2cQK1Pi"], ["created_at", "2024-02-09 07:13:08.906579"], ["updated_at", "2024-02-09 07:13:08.906579"], ["name", "addo1"], ["jti", "12b935dd-8c7a-4319-9b6b-dffb78d7d63e"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 295ms (Views: 0.2ms | ActiveRecord: 51.1ms | Allocations: 11160)
+
+
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 07:22:39 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"proofxxx", "location"=>"mali", "description"=>"I am gonna kick", "user_id"=>1}}
+Completed 500 Internal Server Error in 1ms (Allocations: 1068)
+
+
+  
+NoMethodError (undefined method `jobs' for nil:NilClass
+
+    current_user.jobs.build(job_params)
+                ^^^^^):
+  
+app/controllers/jobs_controller.rb:15:in `create'
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 07:23:21 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"proofxxx", "location"=>"mali", "description"=>"I am gonna kick", "user_id"=>1}}
+[31mUnpermitted parameter: :user_id[0m
+Completed 500 Internal Server Error in 73ms (ActiveRecord: 7.2ms | Allocations: 9222)
+
+
+  
+NoMethodError (undefined method `user_signed_in?' for #<JobPolicy:0x000000010cf91368 @user=nil, @job=#<Job id: nil, name: "proofxxx", location: "mali", description: "I am gonna kick", created_at: nil, updated_at: nil, like: []>>
+
+    user_signed_in?
+    ^^^^^^^^^^^^^^^):
+  
+app/policies/job_policy.rb:12:in `create?'
+app/controllers/jobs_controller.rb:17:in `create'
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 07:25:29 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"proofxxx", "location"=>"mali", "description"=>"I am gonna kick", "user_id"=>1}}
+[31mUnpermitted parameter: :user_id[0m
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 6.4ms | Allocations: 6109)
+
+
+  
+NoMethodError (undefined method `user_signed_in?' for #<JobPolicy:0x000000010c8ae348 @user=nil, @job=#<Job id: nil, user_id: nil, name: "proofxxx", location: "mali", description: "I am gonna kick", created_at: nil, updated_at: nil, like: []>>
+
+    p "------------------------>>> #{user_signed_in?}"
+                                     ^^^^^^^^^^^^^^^):
+  
+app/policies/job_policy.rb:12:in `create?'
+app/controllers/jobs_controller.rb:17:in `create'
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 07:27:42 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"proofxxx", "location"=>"mali", "description"=>"I am gonna kick", "user_id"=>1}}
+[31mUnpermitted parameter: :user_id[0m
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 2.5ms | Allocations: 6095)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<JobPolicy:0x000000010d2123a8 @user=nil, @job=#<Job id: nil, user_id: nil, name: "proofxxx", location: "mali", description: "I am gonna kick", created_at: nil, updated_at: nil, like: []>>
+
+    p "------------------------>>> #{current_user.id}"
+                                     ^^^^^^^^^^^^):
+  
+app/policies/job_policy.rb:12:in `create?'
+app/controllers/jobs_controller.rb:17:in `create'
+Started POST "/signup" for 127.0.0.1 at 2024-02-09 07:38:19 +0000
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"name"=>"addo1", "email"=>"addor@gmail.com", "password"=>"[FILTERED]"}, "registration"=>{"user"=>{"name"=>"addo1", "email"=>"addor@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "addor@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "jti") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "addor@gmail.com"], ["encrypted_password", "$2a$12$zbcgdERn44zzNf52pw2iiueMHabut4SHNBzDcl9Av3ASvb6XjLSYG"], ["created_at", "2024-02-09 07:38:19.737263"], ["updated_at", "2024-02-09 07:38:19.737263"], ["name", "addo1"], ["jti", "53af91f1-67ed-4cf3-98cb-35366a84bfa6"]]
+  [1m[36mTRANSACTION (7.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 378ms (Views: 0.2ms | ActiveRecord: 65.6ms | Allocations: 15120)
+
+
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 07:39:15 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"proofxxx", "location"=>"mali", "description"=>"I am gonna kick", "user_id"=>1}}
+[31mUnpermitted parameter: :user_id[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:17:in `create'
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms | Allocations: 2955)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<JobPolicy:0x000000010cbcae00 @user=#<User id: 2, email: "addor@gmail.com", created_at: "2024-02-09 07:38:19.737263000 +0000", updated_at: "2024-02-09 07:38:19.737263000 +0000", name: "addo1", avatar: nil, jti: "53af91f1-67ed-4cf3-98cb-35366a84bfa6">, @job=#<Job id: nil, user_id: nil, name: "proofxxx", location: "mali", description: "I am gonna kick", created_at: nil, updated_at: nil, like: []>>
+
+    p "------------------------>>> #{current_user.id}"
+                                     ^^^^^^^^^^^^):
+  
+app/policies/job_policy.rb:12:in `create?'
+app/controllers/jobs_controller.rb:17:in `create'
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 07:40:21 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"proofxxx", "location"=>"mali", "description"=>"I am gonna kick", "user_id"=>1}}
+[31mUnpermitted parameter: :user_id[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:17:in `create'
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 7.7ms | Allocations: 12299)
+
+
+  
+NoMethodError (undefined method `user_signed_in?' for #<JobPolicy:0x000000010c4aff08 @user=#<User id: 2, email: "addor@gmail.com", created_at: "2024-02-09 07:38:19.737263000 +0000", updated_at: "2024-02-09 07:38:19.737263000 +0000", name: "addo1", avatar: nil, jti: "53af91f1-67ed-4cf3-98cb-35366a84bfa6">, @job=#<Job id: nil, user_id: nil, name: "proofxxx", location: "mali", description: "I am gonna kick", created_at: nil, updated_at: nil, like: []>>
+
+    user_signed_in?
+    ^^^^^^^^^^^^^^^):
+  
+app/policies/job_policy.rb:13:in `create?'
+app/controllers/jobs_controller.rb:17:in `create'
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 07:43:32 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"proofxxx", "location"=>"mali", "description"=>"I am gonna kick", "user_id"=>1}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:16:in `create'
+[31mUnpermitted parameter: :user_id[0m
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 6.7ms | Allocations: 12142)
+
+
+  
+NoMethodError (undefined method `user_signed_in?' for #<JobPolicy:0x000000010ce7adf8 @user=#<User id: 2, email: "addor@gmail.com", created_at: "2024-02-09 07:38:19.737263000 +0000", updated_at: "2024-02-09 07:38:19.737263000 +0000", name: "addo1", avatar: nil, jti: "53af91f1-67ed-4cf3-98cb-35366a84bfa6">, @job=#<Job id: nil, user_id: nil, name: "proofxxx", location: "mali", description: "I am gonna kick", created_at: nil, updated_at: nil, like: []>>
+
+    user_signed_in?
+    ^^^^^^^^^^^^^^^):
+  
+app/policies/job_policy.rb:13:in `create?'
+app/controllers/jobs_controller.rb:18:in `create'
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 07:45:28 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"proofxxx", "location"=>"mali", "description"=>"I am gonna kick", "user_id"=>1}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:16:in `create'
+[31mUnpermitted parameter: :user_id[0m
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 4.8ms | Allocations: 12245)
+
+
+  
+NoMethodError (undefined method `user_signed_in?' for #<JobPolicy:0x000000010a991528 @user=#<User id: 2, email: "addor@gmail.com", created_at: "2024-02-09 07:38:19.737263000 +0000", updated_at: "2024-02-09 07:38:19.737263000 +0000", name: "addo1", avatar: nil, jti: "53af91f1-67ed-4cf3-98cb-35366a84bfa6">, @job=#<Job id: nil, user_id: nil, name: "proofxxx", location: "mali", description: "I am gonna kick", created_at: nil, updated_at: nil, like: []>>
+
+    user_signed_in?
+    ^^^^^^^^^^^^^^^):
+  
+app/policies/job_policy.rb:13:in `create?'
+app/controllers/jobs_controller.rb:18:in `create'
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 07:54:39 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"proofxxx", "location"=>"mali", "description"=>"I am gonna kick", "user_id"=>1}}
+[31mUnpermitted parameter: :user_id[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:18:in `create'
+Completed 422 Unprocessable Entity in 82ms (ActiveRecord: 51.2ms | Allocations: 14955)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/jobs_controller.rb:19:in `create'
+Started POST "/login" for 127.0.0.1 at 2024-02-09 07:56:19 +0000
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"addo11@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"addo11@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "addo11@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.4ms | Allocations: 1767)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-02-09 07:57:00 +0000
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"addor@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"addor@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "addor@gmail.com"], ["LIMIT", 1]]
+Completed 200 OK in 246ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 3144)
+
+
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 07:58:05 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"proofxxx", "location"=>"mali", "description"=>"I am gonna kick", "user_id"=>1}}
+[31mUnpermitted parameter: :user_id[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:18:in `create'
+Completed 422 Unprocessable Entity in 4ms (ActiveRecord: 0.5ms | Allocations: 1642)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/jobs_controller.rb:19:in `create'
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 07:58:36 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"proofxxx", "location"=>"mali", "description"=>"I am gonna kick", "user_id"=>1}}
+[31mUnpermitted parameter: :user_id[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:19:in `create'
+  [1m[36mJob Create (46.4ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "location", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "proofxxx"], ["location", "mali"], ["description", "I am gonna kick"], ["created_at", "2024-02-09 07:58:37.149946"], ["updated_at", "2024-02-09 07:58:37.149946"]]
+  ↳ app/controllers/jobs_controller.rb:19:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:19:in `create'
+  [1m[36mActiveStorage::Attachment Load (31.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Job"], ["name", "poster"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:21:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Job"], ["name", "logo"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:21:in `create'
+Completed 200 OK in 123ms (Views: 9.2ms | ActiveRecord: 88.6ms | Allocations: 17865)
+
+
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 08:20:46 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"proofxxx", "location"=>"mali", "description"=>"I am gonna kick", "user_id"=>1}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:18:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:18:in `create'
+  [1m[36mJob Create (0.9ms)[0m  [1m[32mINSERT INTO "jobs" ("user_id", "name", "location", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 1], ["name", "proofxxx"], ["location", "mali"], ["description", "I am gonna kick"], ["created_at", "2024-02-09 08:20:46.941180"], ["updated_at", "2024-02-09 08:20:46.941180"]]
+  ↳ app/controllers/jobs_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (40.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:18:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Job"], ["name", "poster"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:20:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Job"], ["name", "logo"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:20:in `create'
+Completed 200 OK in 155ms (Views: 9.5ms | ActiveRecord: 51.1ms | Allocations: 23238)
+
+
+  [1m[36mJob Load (0.8ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY "jobs"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."user_id" = $1[0m  [["user_id", 1]]
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 08:22:15 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"proofxxxaaa", "location"=>"mali", "description"=>"I am gonna kick", "user_id"=>1}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 20.8ms | Allocations: 13644)
+
+
+  
+NameError (undefined local variable or method `job' for #<JobsController:0x0000000003a1d8>
+
+    authorize job
+              ^^^):
+  
+app/controllers/jobs_controller.rb:16:in `create'
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 08:22:58 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"proofxxxaaa", "location"=>"mali", "description"=>"I am gonna kick", "user_id"=>1}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:17:in `create'
+  [1m[36mJob Create (0.5ms)[0m  [1m[32mINSERT INTO "jobs" ("user_id", "name", "location", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 2], ["name", "proofxxxaaa"], ["location", "mali"], ["description", "I am gonna kick"], ["created_at", "2024-02-09 08:22:58.398305"], ["updated_at", "2024-02-09 08:22:58.398305"]]
+  ↳ app/controllers/jobs_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (40.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:17:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Job"], ["name", "poster"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:19:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Job"], ["name", "logo"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:19:in `create'
+Completed 200 OK in 84ms (Views: 9.8ms | ActiveRecord: 48.0ms | Allocations: 18176)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 08:24:00 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"proofxxxaaa", "location"=>"mali", "description"=>"I am gonna kick", "user_id"=>1}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:17:in `create'
+  [1m[36mJob Create (0.6ms)[0m  [1m[32mINSERT INTO "jobs" ("user_id", "name", "location", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 2], ["name", "proofxxxaaa"], ["location", "mali"], ["description", "I am gonna kick"], ["created_at", "2024-02-09 08:24:00.174001"], ["updated_at", "2024-02-09 08:24:00.174001"]]
+  ↳ app/controllers/jobs_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (6.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:17:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Job"], ["name", "poster"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:19:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Job"], ["name", "logo"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:19:in `create'
+Completed 200 OK in 21ms (Views: 5.4ms | ActiveRecord: 8.2ms | Allocations: 5398)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 08:31:38 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"proofxxxaaammmmm", "location"=>"mali", "description"=>"I am gonna kick", "user_id"=>1}}
+Completed 500 Internal Server Error in 1ms (Allocations: 952)
+
+
+  
+NoMethodError (undefined method `jobs' for nil:NilClass
+
+    job = current_user.jobs.build(job_params)
+                      ^^^^^):
+  
+app/controllers/jobs_controller.rb:15:in `create'
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 08:32:22 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"proofxxxaaammmmm", "location"=>"mali", "description"=>"I am gonna kick", "user_id"=>1}}
+Completed 500 Internal Server Error in 2ms (Allocations: 911)
+
+
+  
+NoMethodError (undefined method `jobs' for nil:NilClass
+
+    job = current_user.jobs.build(job_params)
+                      ^^^^^):
+  
+app/controllers/jobs_controller.rb:15:in `create'
+Started POST "/login" for 127.0.0.1 at 2024-02-09 08:34:31 +0000
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"addor@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"addor@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "addor@gmail.com"], ["LIMIT", 1]]
+Completed 200 OK in 240ms (Views: 0.2ms | ActiveRecord: 6.7ms | Allocations: 6538)
+
+
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 08:35:08 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"proofxxxaaammmmm", "location"=>"mali", "description"=>"I am gonna kick", "user_id"=>1}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:17:in `create'
+  [1m[36mJob Create (1.5ms)[0m  [1m[32mINSERT INTO "jobs" ("user_id", "name", "location", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 2], ["name", "proofxxxaaammmmm"], ["location", "mali"], ["description", "I am gonna kick"], ["created_at", "2024-02-09 08:35:08.981018"], ["updated_at", "2024-02-09 08:35:08.981018"]]
+  ↳ app/controllers/jobs_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (6.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:17:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Job"], ["name", "poster"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:19:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Job"], ["name", "logo"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:19:in `create'
+Completed 200 OK in 25ms (Views: 5.6ms | ActiveRecord: 10.4ms | Allocations: 5558)
+
+
