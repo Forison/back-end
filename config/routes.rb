@@ -10,4 +10,6 @@ Rails.application.routes.draw do
                        sessions: 'users/sessions',
                        registrations: 'users/registrations'
                      }
+  resources :jobs, only: %i[index create]
+  patch '/like_job/:id', to: 'jobs#like_job'
 end

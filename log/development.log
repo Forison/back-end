@@ -499,3 +499,1735 @@ Processing by Users::SessionsController#create as */*
 Completed 200 OK in 227ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 1487)
 
 
+Started POST "/login" for 127.0.0.1 at 2024-02-08 23:36:21 +0000
+  
+NameError (uninitialized constant ApplicationController::Pundit
+
+  include Pundit::Authorization
+          ^^^^^^):
+  
+app/controllers/application_controller.rb:4:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:3:in `<main>'
+app/controllers/users/sessions_controller.rb:4:in `<module:Users>'
+app/controllers/users/sessions_controller.rb:3:in `<main>'
+Started POST "/login" for 127.0.0.1 at 2024-02-08 23:36:44 +0000
+  
+NameError (uninitialized constant ApplicationController::Pundit
+
+  include Pundit::Authorization
+          ^^^^^^):
+  
+app/controllers/application_controller.rb:4:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:3:in `<main>'
+app/controllers/users/sessions_controller.rb:4:in `<module:Users>'
+app/controllers/users/sessions_controller.rb:3:in `<main>'
+Started POST "/login" for 127.0.0.1 at 2024-02-08 23:36:45 +0000
+  
+NameError (uninitialized constant ApplicationController::Pundit
+
+  include Pundit::Authorization
+          ^^^^^^):
+  
+app/controllers/application_controller.rb:4:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:3:in `<main>'
+app/controllers/users/sessions_controller.rb:4:in `<module:Users>'
+app/controllers/users/sessions_controller.rb:3:in `<main>'
+Started POST "/login" for 127.0.0.1 at 2024-02-08 23:44:10 +0000
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"name"=>"addo1", "email"=>"addo11@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"name"=>"addo1", "email"=>"addo11@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "addo11@gmail.com"], ["LIMIT", 1]]
+Completed 200 OK in 253ms (Views: 0.3ms | ActiveRecord: 3.9ms | Allocations: 12775)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3190432722120052185)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateActiveStorageTables (20240208234955)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (45.4ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" bigserial primary key, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "service_name" character varying NOT NULL, "byte_size" bigint NOT NULL, "checksum" character varying NOT NULL, "created_at" timestamp NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key")[0m
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" bigserial primary key, "name" character varying NOT NULL, "record_type" character varying NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" timestamp NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id")[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "active_storage_variant_records" ("id" bigserial primary key, "blob_id" bigint NOT NULL, "variation_digest" character varying NOT NULL, CONSTRAINT "fk_rails_993965df05"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_variant_records_uniqueness" ON "active_storage_variant_records" ("blob_id", "variation_digest")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20240208234955"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(3190432722120052185)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3190432722120052185)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateJobs (20240209000456)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (43.8ms)[0m  [1m[35mCREATE TABLE "jobs" ("id" bigserial primary key, "name" character varying, "location" character varying, "description" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20240209000456"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3190432722120052185)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/jobs" for 127.0.0.1 at 2024-02-09 02:07:51 +0000
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+NameError (undefined local variable or method `inherit_resources' for JobsController:Class
+
+  inherit_resources
+  ^^^^^^^^^^^^^^^^^):
+  
+app/controllers/jobs_controller.rb:4:in `<class:JobsController>'
+app/controllers/jobs_controller.rb:3:in `<main>'
+Started GET "/jobs" for 127.0.0.1 at 2024-02-09 02:08:27 +0000
+Processing by JobsController#index as */*
+  [1m[36mJob Load (40.7ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:10:in `index'
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 40.7ms | Allocations: 2997)
+
+
+  
+TypeError (no implicit conversion of Symbol into Integer):
+  
+app/controllers/jobs_controller.rb:10:in `index'
+Started GET "/jobs" for 127.0.0.1 at 2024-02-09 02:11:28 +0000
+Processing by JobsController#index as */*
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:10:in `index'
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.4ms | Allocations: 2822)
+
+
+  
+TypeError (no implicit conversion of Symbol into Integer):
+  
+app/controllers/jobs_controller.rb:10:in `index'
+Started GET "/jobs" for 127.0.0.1 at 2024-02-09 02:11:44 +0000
+Processing by JobsController#index as */*
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:10:in `index'
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms | Allocations: 2776)
+
+
+  
+TypeError (no implicit conversion of Symbol into Integer):
+  
+app/controllers/jobs_controller.rb:10:in `index'
+Started GET "/jobs" for 127.0.0.1 at 2024-02-09 02:12:48 +0000
+Processing by JobsController#index as */*
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 2750)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2024-02-09 02:13:31 +0000
+Processing by JobsController#index as */*
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 726)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2024-02-09 02:13:33 +0000
+Processing by JobsController#index as */*
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 712)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2024-02-09 02:13:46 +0000
+Processing by JobsController#index as */*
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:11:in `index'
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms | Allocations: 2822)
+
+
+  
+TypeError (no implicit conversion of Symbol into Integer):
+  
+app/controllers/jobs_controller.rb:11:in `index'
+Started GET "/jobs" for 127.0.0.1 at 2024-02-09 02:17:30 +0000
+Processing by JobsController#index as */*
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY "jobs"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:11:in `index'
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 4.0ms | Allocations: 3804)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass
+
+      data: JobSerializer.new(jobs.first).serializable_hash[:data][:attributes]
+                                                                  ^^^^^^^^^^^^^):
+  
+app/controllers/jobs_controller.rb:11:in `index'
+Started GET "/jobs" for 127.0.0.1 at 2024-02-09 02:33:54 +0000
+Processing by JobsController#index as */*
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:11:in `index'
+Completed 200 OK in 77ms (Views: 0.2ms | ActiveRecord: 7.0ms | Allocations: 6918)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2024-02-09 02:36:43 +0000
+Processing by JobsController#index as */*
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:10:in `index'
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms | Allocations: 2831)
+
+
+  
+TypeError (no implicit conversion of Symbol into Integer):
+  
+app/controllers/jobs_controller.rb:10:in `[]'
+app/controllers/jobs_controller.rb:10:in `index'
+Started GET "/jobs" for 127.0.0.1 at 2024-02-09 02:38:33 +0000
+Processing by JobsController#index as */*
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 3004)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2024-02-09 02:39:36 +0000
+Processing by JobsController#index as */*
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:7:in `index'
+Completed 200 OK in 11ms (Views: 6.7ms | ActiveRecord: 0.2ms | Allocations: 2991)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2024-02-09 02:39:41 +0000
+Processing by JobsController#index as */*
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 769)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2024-02-09 02:39:42 +0000
+Processing by JobsController#index as */*
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 749)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2024-02-09 02:39:43 +0000
+Processing by JobsController#index as */*
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.5ms | Allocations: 749)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2024-02-09 02:39:44 +0000
+Processing by JobsController#index as */*
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:7:in `index'
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.2ms | Allocations: 749)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2024-02-09 02:39:45 +0000
+Processing by JobsController#index as */*
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 749)
+
+
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 02:42:18 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"addo", "location"=>"addo@gmail.com", "description"=>"1234567"}}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 2861)
+
+
+  
+NameError (undefined local variable or method `resource' for #<JobsController:0x00000000015888>
+
+    resource.assign_attributes(job_params)
+    ^^^^^^^^
+Did you mean?  rescue):
+  
+app/controllers/jobs_controller.rb:14:in `create'
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 02:43:21 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"twitter", "location"=>"ghana", "description"=>"lorem iiaiiandb ad dad. ada da dad ada"}}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 2476)
+
+
+  
+NameError (undefined local variable or method `resource' for #<JobsController:0x000000000159c8>
+
+    resource.assign_attributes(job_params)
+    ^^^^^^^^
+Did you mean?  rescue):
+  
+app/controllers/jobs_controller.rb:14:in `create'
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 02:44:13 +0000
+  
+NameError (undefined local variable or method `inherit_resources' for JobsController:Class
+
+  inherit_resources
+  ^^^^^^^^^^^^^^^^^):
+  
+app/controllers/jobs_controller.rb:4:in `<class:JobsController>'
+app/controllers/jobs_controller.rb:3:in `<main>'
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 02:53:17 +0000
+  
+NameError (undefined local variable or method `inherit_resources' for JobsController:Class
+
+  inherit_resources
+  ^^^^^^^^^^^^^^^^^):
+  
+app/controllers/jobs_controller.rb:4:in `<class:JobsController>'
+app/controllers/jobs_controller.rb:3:in `<main>'
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 02:54:03 +0000
+  
+NameError (uninitialized constant JobsController::InheritedResources
+
+  include InheritedResources::DSL
+          ^^^^^^^^^^^^^^^^^^):
+  
+app/controllers/jobs_controller.rb:4:in `<class:JobsController>'
+app/controllers/jobs_controller.rb:3:in `<main>'
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 03:03:44 +0000
+  
+NameError (uninitialized constant JobsController::InheritedResources
+
+  include InheritedResources::DSL
+          ^^^^^^^^^^^^^^^^^^):
+  
+app/controllers/jobs_controller.rb:4:in `<class:JobsController>'
+app/controllers/jobs_controller.rb:3:in `<main>'
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 03:04:10 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"twitter", "location"=>"ghana", "description"=>"lorem iiaiiandb ad dad. ada da dad ada"}}
+Completed 500 Internal Server Error in 6ms (Allocations: 2856)
+
+
+  
+NameError (undefined local variable or method `resource' for #<JobsController:0x0000000001a720>
+
+    resource.assign_attributes(job_params)
+    ^^^^^^^^
+Did you mean?  rescue):
+  
+app/controllers/jobs_controller.rb:16:in `create'
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 03:04:32 +0000
+  
+NameError (uninitialized constant JobsController::InheritedResources
+
+  include InheritedResources::DSL
+          ^^^^^^^^^^^^^^^^^^):
+  
+app/controllers/jobs_controller.rb:4:in `<class:JobsController>'
+app/controllers/jobs_controller.rb:3:in `<main>'
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 03:04:42 +0000
+  
+NameError (undefined local variable or method `inherit_resources' for JobsController:Class
+
+  inherit_resources
+  ^^^^^^^^^^^^^^^^^):
+  
+app/controllers/jobs_controller.rb:5:in `<class:JobsController>'
+app/controllers/jobs_controller.rb:4:in `<main>'
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 03:04:57 +0000
+  
+NameError (uninitialized constant JobsController::InheritedResources
+
+  include InheritedResources::DSL
+          ^^^^^^^^^^^^^^^^^^):
+  
+app/controllers/jobs_controller.rb:4:in `<class:JobsController>'
+app/controllers/jobs_controller.rb:3:in `<main>'
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 03:05:25 +0000
+  
+NameError (undefined local variable or method `inherit_resources' for JobsController:Class
+
+  inherit_resources
+  ^^^^^^^^^^^^^^^^^):
+  
+app/controllers/jobs_controller.rb:4:in `<class:JobsController>'
+app/controllers/jobs_controller.rb:3:in `<main>'
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 03:09:12 +0000
+  
+NameError (undefined local variable or method `inherit_resources' for JobsController:Class
+
+  inherit_resources
+  ^^^^^^^^^^^^^^^^^):
+  
+app/controllers/jobs_controller.rb:4:in `<class:JobsController>'
+app/controllers/jobs_controller.rb:3:in `<main>'
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 03:11:10 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"twitter", "location"=>"ghana", "description"=>"lorem iiaiiandb ad dad. ada da dad ada"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mJob Create (2.3ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "location", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "twitter"], ["location", "ghana"], ["description", "lorem iiaiiandb ad dad. ada da dad ada"], ["created_at", "2024-02-09 03:11:10.855459"], ["updated_at", "2024-02-09 03:11:10.855459"]]
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+Completed 500 Internal Server Error in 87ms (ActiveRecord: 16.7ms | Allocations: 12759)
+
+
+  
+NameError (uninitialized constant Job::ApiResponseService
+
+    response = Job::ApiResponseService.new(resource, 'Job')
+                  ^^^^^^^^^^^^^^^^^^^^):
+  
+app/controllers/jobs_controller.rb:16:in `create'
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 03:11:47 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"twitter", "location"=>"ghana", "description"=>"lorem iiaiiandb ad dad. ada da dad ada"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mJob Create (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "location", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "twitter"], ["location", "ghana"], ["description", "lorem iiaiiandb ad dad. ada da dad ada"], ["created_at", "2024-02-09 03:11:47.202641"], ["updated_at", "2024-02-09 03:11:47.202641"]]
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (40.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 43.6ms | Allocations: 8089)
+
+
+  
+NameError (uninitialized constant Job::ApiResponseService
+
+    response = ::Job::ApiResponseService.new(resource, 'Job')
+                    ^^^^^^^^^^^^^^^^^^^^):
+  
+app/controllers/jobs_controller.rb:16:in `create'
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 03:12:16 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"twitter", "location"=>"ghana", "description"=>"lorem iiaiiandb ad dad. ada da dad ada"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mJob Create (0.4ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "location", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "twitter"], ["location", "ghana"], ["description", "lorem iiaiiandb ad dad. ada da dad ada"], ["created_at", "2024-02-09 03:12:16.274569"], ["updated_at", "2024-02-09 03:12:16.274569"]]
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (40.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 44.2ms | Allocations: 8150)
+
+
+  
+NameError (uninitialized constant Job::ApiResponseService
+
+    response = Job::ApiResponseService.new(job, 'Job')
+                  ^^^^^^^^^^^^^^^^^^^^):
+  
+app/controllers/jobs_controller.rb:16:in `create'
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 03:13:25 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"twitter", "location"=>"ghana", "description"=>"lorem iiaiiandb ad dad. ada da dad ada"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mJob Create (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "location", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "twitter"], ["location", "ghana"], ["description", "lorem iiaiiandb ad dad. ada da dad ada"], ["created_at", "2024-02-09 03:13:26.151250"], ["updated_at", "2024-02-09 03:13:26.151250"]]
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (40.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 43.9ms | Allocations: 7684)
+
+
+  
+NameError (uninitialized constant JobsController::ApiResponseService
+
+    response = ApiResponseService.new(job, 'Job')
+               ^^^^^^^^^^^^^^^^^^):
+  
+app/controllers/jobs_controller.rb:16:in `create'
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 03:14:13 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"twitter", "location"=>"ghana", "description"=>"lorem iiaiiandb ad dad. ada da dad ada"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mJob Create (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "location", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "twitter"], ["location", "ghana"], ["description", "lorem iiaiiandb ad dad. ada da dad ada"], ["created_at", "2024-02-09 03:14:13.806414"], ["updated_at", "2024-02-09 03:14:13.806414"]]
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (6.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 7.0ms | Allocations: 3910)
+
+
+  
+NameError (uninitialized constant JobsController::ApiResponseService
+
+    response = ApiResponseService.new(job, 'Job')
+               ^^^^^^^^^^^^^^^^^^):
+  
+app/controllers/jobs_controller.rb:16:in `create'
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 03:14:21 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"twitter", "location"=>"ghana", "description"=>"lorem iiaiiandb ad dad. ada da dad ada"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mJob Create (0.4ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "location", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "twitter"], ["location", "ghana"], ["description", "lorem iiaiiandb ad dad. ada da dad ada"], ["created_at", "2024-02-09 03:14:21.450581"], ["updated_at", "2024-02-09 03:14:21.450581"]]
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (6.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 6.8ms | Allocations: 3907)
+
+
+  
+NameError (uninitialized constant JobsController::ApiResponseService
+
+    response = ApiResponseService.new(job, 'Job')
+               ^^^^^^^^^^^^^^^^^^):
+  
+app/controllers/jobs_controller.rb:16:in `create'
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 03:14:44 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"twitter", "location"=>"ghana", "description"=>"lorem iiaiiandb ad dad. ada da dad ada"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mJob Create (0.2ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "location", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "twitter"], ["location", "ghana"], ["description", "lorem iiaiiandb ad dad. ada da dad ada"], ["created_at", "2024-02-09 03:14:44.609544"], ["updated_at", "2024-02-09 03:14:44.609544"]]
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (40.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+Completed 204 No Content in 56ms (ActiveRecord: 43.9ms | Allocations: 5715)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2024-02-09 03:14:59 +0000
+Processing by JobsController#index as */*
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:7:in `index'
+  [1m[36mActiveStorage::Attachment Load (45.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Job"], ["name", "poster"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:7:in `index'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Job"], ["name", "logo"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:7:in `index'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Job"], ["name", "poster"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:7:in `index'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Job"], ["name", "logo"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:7:in `index'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Job"], ["name", "poster"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:7:in `index'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Job"], ["name", "logo"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:7:in `index'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Job"], ["name", "poster"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:7:in `index'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Job"], ["name", "logo"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:7:in `index'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Job"], ["name", "poster"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:7:in `index'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Job"], ["name", "logo"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:7:in `index'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "Job"], ["name", "poster"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:7:in `index'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "Job"], ["name", "logo"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:7:in `index'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 7], ["record_type", "Job"], ["name", "poster"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:7:in `index'
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 7], ["record_type", "Job"], ["name", "logo"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:7:in `index'
+Completed 200 OK in 127ms (Views: 69.6ms | ActiveRecord: 50.0ms | Allocations: 22642)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2024-02-09 03:26:37 +0000
+Processing by JobsController#index as */*
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:7:in `index'
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Job"], ["name", "poster"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:7:in `index'
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Job"], ["name", "logo"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:7:in `index'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Job"], ["name", "poster"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:7:in `index'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Job"], ["name", "logo"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:7:in `index'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Job"], ["name", "poster"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:7:in `index'
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Job"], ["name", "logo"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:7:in `index'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Job"], ["name", "poster"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:7:in `index'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Job"], ["name", "logo"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:7:in `index'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Job"], ["name", "poster"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:7:in `index'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Job"], ["name", "logo"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:7:in `index'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "Job"], ["name", "poster"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:7:in `index'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "Job"], ["name", "logo"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:7:in `index'
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 7], ["record_type", "Job"], ["name", "poster"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:7:in `index'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 7], ["record_type", "Job"], ["name", "logo"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:7:in `index'
+Completed 200 OK in 68ms (Views: 62.5ms | ActiveRecord: 12.7ms | Allocations: 27805)
+
+
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 03:26:44 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"twitter", "location"=>"ghana", "description"=>"lorem iiaiiandb ad dad. ada da dad ada"}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mJob Create (0.6ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "location", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "twitter"], ["location", "ghana"], ["description", "lorem iiaiiandb ad dad. ada da dad ada"], ["created_at", "2024-02-09 03:26:44.448049"], ["updated_at", "2024-02-09 03:26:44.448049"]]
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (6.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 7.5ms | Allocations: 4274)
+
+
+  
+NameError (uninitialized constant JobsController::ApiResponseService
+
+    response = ApiResponseService.new(job, 'Job')
+               ^^^^^^^^^^^^^^^^^^):
+  
+app/controllers/jobs_controller.rb:16:in `create'
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 03:27:02 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"twitter", "location"=>"ghana", "description"=>"lorem iiaiiandb ad dad. ada da dad ada"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mJob Create (0.4ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "location", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "twitter"], ["location", "ghana"], ["description", "lorem iiaiiandb ad dad. ada da dad ada"], ["created_at", "2024-02-09 03:27:02.159209"], ["updated_at", "2024-02-09 03:27:02.159209"]]
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (6.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 6.9ms | Allocations: 3907)
+
+
+  
+NameError (uninitialized constant JobsController::ApiResponseService
+
+    response = ApiResponseService.new(job, 'Job')
+               ^^^^^^^^^^^^^^^^^^):
+  
+app/controllers/jobs_controller.rb:16:in `create'
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 03:28:29 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"twitter", "location"=>"ghana", "description"=>"lorem iiaiiandb ad dad. ada da dad ada"}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mJob Create (0.6ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "location", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "twitter"], ["location", "ghana"], ["description", "lorem iiaiiandb ad dad. ada da dad ada"], ["created_at", "2024-02-09 03:28:29.198432"], ["updated_at", "2024-02-09 03:28:29.198432"]]
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (6.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 7.3ms | Allocations: 3907)
+
+
+  
+NameError (uninitialized constant JobsController::ApiResponseService
+
+    response = ApiResponseService.new(job, 'Job')
+               ^^^^^^^^^^^^^^^^^^):
+  
+app/controllers/jobs_controller.rb:16:in `create'
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 03:29:23 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"twitter", "location"=>"ghana", "description"=>"lorem iiaiiandb ad dad. ada da dad ada"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mJob Create (0.4ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "location", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "twitter"], ["location", "ghana"], ["description", "lorem iiaiiandb ad dad. ada da dad ada"], ["created_at", "2024-02-09 03:29:24.076237"], ["updated_at", "2024-02-09 03:29:24.076237"]]
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (40.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+Completed 500 Internal Server Error in 66ms (ActiveRecord: 47.4ms | Allocations: 7802)
+
+
+  
+NameError (uninitialized constant JobsController::JobService
+
+    response = JobService.new(job, 'Job')
+               ^^^^^^^^^^
+Did you mean?  JobSerializer):
+  
+app/controllers/jobs_controller.rb:16:in `create'
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 03:30:17 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"twitter", "location"=>"ghana", "description"=>"lorem iiaiiandb ad dad. ada da dad ada"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mJob Create (0.4ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "location", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "twitter"], ["location", "ghana"], ["description", "lorem iiaiiandb ad dad. ada da dad ada"], ["created_at", "2024-02-09 03:30:17.443520"], ["updated_at", "2024-02-09 03:30:17.443520"]]
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (40.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 44.4ms | Allocations: 7710)
+
+
+  
+NameError (uninitialized constant JobsController::JobService
+
+    response = JobService.new(job, 'Job')
+               ^^^^^^^^^^
+Did you mean?  JobSerializer):
+  
+app/controllers/jobs_controller.rb:16:in `create'
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 03:31:03 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"twitter", "location"=>"ghana", "description"=>"lorem iiaiiandb ad dad. ada da dad ada"}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mJob Create (0.4ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "location", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "twitter"], ["location", "ghana"], ["description", "lorem iiaiiandb ad dad. ada da dad ada"], ["created_at", "2024-02-09 03:31:03.109198"], ["updated_at", "2024-02-09 03:31:03.109198"]]
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (6.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 7.3ms | Allocations: 3960)
+
+
+  
+NameError (uninitialized constant JobsController::JobService
+
+    response = JobService.new(job, 'Job')
+               ^^^^^^^^^^
+Did you mean?  JobSerializer):
+  
+app/controllers/jobs_controller.rb:16:in `create'
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 03:32:44 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"twitter", "location"=>"ghana", "description"=>"lorem iiaiiandb ad dad. ada da dad ada"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mJob Create (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "location", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "twitter"], ["location", "ghana"], ["description", "lorem iiaiiandb ad dad. ada da dad ada"], ["created_at", "2024-02-09 03:32:44.858943"], ["updated_at", "2024-02-09 03:32:44.858943"]]
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 6.7ms | Allocations: 7753)
+
+
+  
+NameError (uninitialized constant JobsController::JobsService
+
+    response = JobsService.new(job, 'Job')
+               ^^^^^^^^^^^
+Did you mean?  JobSerializer):
+  
+app/controllers/jobs_controller.rb:16:in `create'
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 03:44:35 +0000
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"twitter", "location"=>"ghana", "description"=>"lorem iiaiiandb ad dad. ada da dad ada"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mJob Create (0.6ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "location", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "twitter"], ["location", "ghana"], ["description", "lorem iiaiiandb ad dad. ada da dad ada"], ["created_at", "2024-02-09 03:44:35.679022"], ["updated_at", "2024-02-09 03:44:35.679022"]]
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (39.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+Completed 500 Internal Server Error in 78ms (ActiveRecord: 44.8ms | Allocations: 9240)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 0)):
+  
+app/services/jobs_service.rb:5:in `initialize'
+app/controllers/jobs_controller.rb:16:in `new'
+app/controllers/jobs_controller.rb:16:in `create'
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 03:45:43 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"twitter", "location"=>"ghana", "description"=>"lorem iiaiiandb ad dad. ada da dad ada"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mJob Create (0.9ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "location", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "twitter"], ["location", "ghana"], ["description", "lorem iiaiiandb ad dad. ada da dad ada"], ["created_at", "2024-02-09 03:45:43.806880"], ["updated_at", "2024-02-09 03:45:43.806880"]]
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (6.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+Completed 500 Internal Server Error in 69ms (ActiveRecord: 11.0ms | Allocations: 7145)
+
+
+  
+NoMethodError (undefined method `feedbacks' for #<JobsService:0x000000011419dc90 @resource=#<Job id: 16, name: "twitter", location: "ghana", description: "lorem iiaiiandb ad dad. ada da dad ada", created_at: "2024-02-09 03:45:43.806880000 +0000", updated_at: "2024-02-09 03:45:43.806880000 +0000">, @message_subject="Job">
+
+      feedbacks(@resource, @message_subject)
+      ^^^^^^^^^
+Did you mean?  feedback):
+  
+app/services/jobs_service.rb:11:in `call'
+app/controllers/jobs_controller.rb:17:in `create'
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 03:46:07 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"twitter", "location"=>"ghana", "description"=>"lorem iiaiiandb ad dad. ada da dad ada"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mJob Create (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "location", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "twitter"], ["location", "ghana"], ["description", "lorem iiaiiandb ad dad. ada da dad ada"], ["created_at", "2024-02-09 03:46:07.607061"], ["updated_at", "2024-02-09 03:46:07.607061"]]
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (41.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+Completed 500 Internal Server Error in 74ms (ActiveRecord: 56.2ms | Allocations: 7209)
+
+
+  
+NameError (undefined local variable or method `resources' for #<JobsService:0x0000000115959410 @resource=#<Job id: 17, name: "twitter", location: "ghana", description: "lorem iiaiiandb ad dad. ada da dad ada", created_at: "2024-02-09 03:46:07.607061000 +0000", updated_at: "2024-02-09 03:46:07.607061000 +0000">, @message_subject="Job">
+
+      if resources.persisted?
+         ^^^^^^^^^
+Did you mean?  resource
+               @resource):
+  
+app/services/jobs_service.rb:15:in `feedback'
+app/services/jobs_service.rb:11:in `call'
+app/controllers/jobs_controller.rb:17:in `create'
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 03:46:50 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"twitter", "location"=>"ghana", "description"=>"lorem iiaiiandb ad dad. ada da dad ada"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mJob Create (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "location", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "twitter"], ["location", "ghana"], ["description", "lorem iiaiiandb ad dad. ada da dad ada"], ["created_at", "2024-02-09 03:46:50.806059"], ["updated_at", "2024-02-09 03:46:50.806059"]]
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 5.2ms | Allocations: 5945)
+
+
+  
+Errno::ENOENT (No such file or directory - Job):
+  
+app/services/jobs_service.rb:17:in ``'
+app/services/jobs_service.rb:17:in `feedback'
+app/services/jobs_service.rb:11:in `call'
+app/controllers/jobs_controller.rb:17:in `create'
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 03:47:40 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"twitter", "location"=>"ghana", "description"=>"lorem iiaiiandb ad dad. ada da dad ada"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mJob Create (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "location", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "twitter"], ["location", "ghana"], ["description", "lorem iiaiiandb ad dad. ada da dad ada"], ["created_at", "2024-02-09 03:47:41.076894"], ["updated_at", "2024-02-09 03:47:41.076894"]]
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (6.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 9.2ms | Allocations: 6993)
+
+
+  
+NoMethodError (undefined method `render' for #<JobsService:0x0000000115e1e338 @resource=#<Job id: 19, name: "twitter", location: "ghana", description: "lorem iiaiiandb ad dad. ada da dad ada", created_at: "2024-02-09 03:47:41.076894000 +0000", updated_at: "2024-02-09 03:47:41.076894000 +0000">, @message_subject="Job">
+
+        render json: {
+        ^^^^^^):
+  
+app/services/jobs_service.rb:16:in `feedback'
+app/services/jobs_service.rb:11:in `call'
+app/controllers/jobs_controller.rb:17:in `create'
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 03:49:29 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"twitter", "location"=>"ghana", "description"=>"lorem iiaiiandb ad dad. ada da dad ada"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mJob Create (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "location", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "twitter"], ["location", "ghana"], ["description", "lorem iiaiiandb ad dad. ada da dad ada"], ["created_at", "2024-02-09 03:49:29.862274"], ["updated_at", "2024-02-09 03:49:29.862274"]]
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (39.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 43.2ms | Allocations: 5835)
+
+
+  
+SyntaxError (/Users/admin/Desktop/back-end/app/services/jobs_service.rb:23: syntax error, unexpected ',', expecting `end'
+        }, status: :unprocessable_entity
+         ^
+):
+  
+app/services/jobs_service.rb:23: syntax error, unexpected ',', expecting `end'
+app/services/jobs_service.rb:23: syntax error, unexpected ',', expecting `end'
+app/controllers/jobs_controller.rb:16:in `create'
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 03:50:47 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"twitter", "location"=>"ghana", "description"=>"lorem iiaiiandb ad dad. ada da dad ada"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mJob Create (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "location", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "twitter"], ["location", "ghana"], ["description", "lorem iiaiiandb ad dad. ada da dad ada"], ["created_at", "2024-02-09 03:50:48.160429"], ["updated_at", "2024-02-09 03:50:48.160429"]]
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (6.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+Completed 200 OK in 23ms (Views: 0.4ms | ActiveRecord: 9.8ms | Allocations: 6053)
+
+
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 03:51:15 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"twitter", "location"=>"ghana", "description"=>"lorem iiaiiandb ad dad. ada da dad ada"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mJob Create (0.5ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "location", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "twitter"], ["location", "ghana"], ["description", "lorem iiaiiandb ad dad. ada da dad ada"], ["created_at", "2024-02-09 03:51:15.457413"], ["updated_at", "2024-02-09 03:51:15.457413"]]
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (6.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 22], ["record_type", "Job"], ["name", "poster"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:17:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 22], ["record_type", "Job"], ["name", "logo"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:17:in `create'
+Completed 200 OK in 46ms (Views: 22.1ms | ActiveRecord: 11.8ms | Allocations: 12190)
+
+
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 03:54:53 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"twitter", "location"=>"ghana", "description"=>"lorem iiaiiandb ad dad. ada da dad ada"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mJob Create (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "location", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "twitter"], ["location", "ghana"], ["description", "lorem iiaiiandb ad dad. ada da dad ada"], ["created_at", "2024-02-09 03:54:53.769650"], ["updated_at", "2024-02-09 03:54:53.769650"]]
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (40.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 23], ["record_type", "Job"], ["name", "poster"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:16:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 23], ["record_type", "Job"], ["name", "logo"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:16:in `create'
+Completed 200 OK in 64ms (Views: 8.5ms | ActiveRecord: 45.1ms | Allocations: 10385)
+
+
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 03:55:14 +0000
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"twitter", "location"=>"ghana", "description"=>"lorem iiaiiandb ad dad. ada da dad ada"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mJob Create (0.7ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "location", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "twitter"], ["location", "ghana"], ["description", "lorem iiaiiandb ad dad. ada da dad ada"], ["created_at", "2024-02-09 03:55:14.605544"], ["updated_at", "2024-02-09 03:55:14.605544"]]
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 24], ["record_type", "Job"], ["name", "poster"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:16:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 24], ["record_type", "Job"], ["name", "logo"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:16:in `create'
+Completed 200 OK in 80ms (Views: 18.0ms | ActiveRecord: 11.3ms | Allocations: 15651)
+
+
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 03:55:26 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"twitter", "location"=>"chile", "description"=>"lorem iiaiiandb ad dad. ada da dad ada"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mJob Create (0.4ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "location", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "twitter"], ["location", "chile"], ["description", "lorem iiaiiandb ad dad. ada da dad ada"], ["created_at", "2024-02-09 03:55:26.523362"], ["updated_at", "2024-02-09 03:55:26.523362"]]
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (6.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "Job"], ["name", "poster"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:16:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "Job"], ["name", "logo"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:16:in `create'
+Completed 200 OK in 21ms (Views: 6.0ms | ActiveRecord: 7.7ms | Allocations: 4404)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3190432722120052185)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddLikeToJobs (20240209043321)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (44.1ms)[0m  [1m[35mALTER TABLE "jobs" ADD "like" integer[] DEFAULT '{}'[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20240209043321"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3190432722120052185)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 04:47:06 +0000
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"twitter", "location"=>"chile", "description"=>"lorem iiaiiandb ad dad. ada da dad ada"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mJob Create (1.1ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "location", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "twitter"], ["location", "chile"], ["description", "lorem iiaiiandb ad dad. ada da dad ada"], ["created_at", "2024-02-09 04:47:06.956816"], ["updated_at", "2024-02-09 04:47:06.956816"]]
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (40.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 26], ["record_type", "Job"], ["name", "poster"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:16:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 26], ["record_type", "Job"], ["name", "logo"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:16:in `create'
+Completed 200 OK in 66ms (Views: 9.7ms | ActiveRecord: 43.4ms | Allocations: 9992)
+
+
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 04:48:36 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"cool", "location"=>"turkey", "description"=>"what a cool job for a cool guy"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mJob Create (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "location", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "cool"], ["location", "turkey"], ["description", "what a cool job for a cool guy"], ["created_at", "2024-02-09 04:48:36.698760"], ["updated_at", "2024-02-09 04:48:36.698760"]]
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (6.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 27], ["record_type", "Job"], ["name", "poster"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:16:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 27], ["record_type", "Job"], ["name", "logo"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:16:in `create'
+Completed 200 OK in 17ms (Views: 5.0ms | ActiveRecord: 7.6ms | Allocations: 4379)
+
+
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 04:51:47 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"coolaaaa", "location"=>"turkey", "description"=>"what a cool job for a cool guy"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mJob Create (0.4ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "location", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "coolaaaa"], ["location", "turkey"], ["description", "what a cool job for a cool guy"], ["created_at", "2024-02-09 04:51:47.623898"], ["updated_at", "2024-02-09 04:51:47.623898"]]
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 28], ["record_type", "Job"], ["name", "poster"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:16:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 28], ["record_type", "Job"], ["name", "logo"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:16:in `create'
+Completed 200 OK in 33ms (Views: 9.8ms | ActiveRecord: 9.9ms | Allocations: 11061)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (8088.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "flex_test_development"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (7833.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "flex_test_development"[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (47.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "flex_test_development"[0m
+  [1m[35m (37.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "flex_test_test"[0m
+  [1m[35m (149.0ms)[0m  [1m[35mCREATE DATABASE "flex_test_development" ENCODING = 'unicode'[0m
+  [1m[35m (85.1ms)[0m  [1m[35mCREATE DATABASE "flex_test_test" ENCODING = 'unicode'[0m
+  [1m[35m (46.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3190432722120052185)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20240208201834)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (46.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20240208201834"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddNameToUsers (20240208202352)
+  [1m[36mTRANSACTION (40.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "name" character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20240208202352"]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddAvatarToUsers (20240208202745)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "avatar" character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20240208202745"]]
+  [1m[36mTRANSACTION (40.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddJtiToUsers (20240208213535)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "jti" character varying NOT NULL[0m
+  [1m[35m (41.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_jti" ON "users" ("jti")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20240208213535"]]
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateActiveStorageTables (20240208234955)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (46.7ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" bigserial primary key, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "service_name" character varying NOT NULL, "byte_size" bigint NOT NULL, "checksum" character varying NOT NULL, "created_at" timestamp NOT NULL)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key")[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" bigserial primary key, "name" character varying NOT NULL, "record_type" character varying NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" timestamp NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id")[0m
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE "active_storage_variant_records" ("id" bigserial primary key, "blob_id" bigint NOT NULL, "variation_digest" character varying NOT NULL, CONSTRAINT "fk_rails_993965df05"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_variant_records_uniqueness" ON "active_storage_variant_records" ("blob_id", "variation_digest")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20240208234955"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateJobs (20240209000456)
+  [1m[36mTRANSACTION (40.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "jobs" ("id" bigserial primary key, "name" character varying, "location" character varying, "description" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20240209000456"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddLikeToJobs (20240209043321)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "jobs" ADD "like" integer[] DEFAULT '{}'[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20240209043321"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2024-02-09 04:58:53.328935"], ["updated_at", "2024-02-09 04:58:53.328935"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3190432722120052185)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 05:00:08 +0000
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"coolaaaa", "location"=>"turkey", "description"=>"what a cool job for a cool guy"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mJob Create (0.9ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "location", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "coolaaaa"], ["location", "turkey"], ["description", "what a cool job for a cool guy"], ["created_at", "2024-02-09 05:00:08.216305"], ["updated_at", "2024-02-09 05:00:08.216305"]]
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Job"], ["name", "poster"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:16:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Job"], ["name", "logo"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:16:in `create'
+Completed 200 OK in 76ms (Views: 16.7ms | ActiveRecord: 9.1ms | Allocations: 16347)
+
+
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY "jobs"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY "jobs"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/info?id=1" for 127.0.0.1 at 2024-02-09 05:04:02 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/info"):
+  
+Started GET "/jobs" for 127.0.0.1 at 2024-02-09 05:04:02 +0000
+Processing by JobsController#index as */*
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:6:in `index'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Job"], ["name", "poster"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:6:in `index'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Job"], ["name", "logo"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:6:in `index'
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.8ms | Allocations: 3523)
+
+
+Started GET "/info?id=1" for 127.0.0.1 at 2024-02-09 05:04:50 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/info"):
+  
+Started GET "/jobs" for 127.0.0.1 at 2024-02-09 05:04:50 +0000
+Processing by JobsController#index as */*
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:6:in `index'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Job"], ["name", "poster"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:6:in `index'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Job"], ["name", "logo"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.7ms | Allocations: 3103)
+
+
+Started PATCH "/like_job/1" for 127.0.0.1 at 2024-02-09 05:07:56 +0000
+Processing by JobsController#like_job as */*
+  Parameters: {"name"=>"Add your name in the body", "ids"=>"1", "job"=>{"name"=>"Add your name in the body"}}
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:20:in `like_job'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms | Allocations: 1664)
+
+
+  
+NoMethodError (undefined method `like' for nil:NilClass
+
+    job.like.push(current_user.id)
+       ^^^^^):
+  
+app/controllers/jobs_controller.rb:21:in `like_job'
+Started PATCH "/like_job/1" for 127.0.0.1 at 2024-02-09 05:09:51 +0000
+Processing by JobsController#like_job as */*
+  Parameters: {"name"=>"Add your name in the body", "ids"=>"1", "job"=>{"name"=>"Add your name in the body"}}
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:20:in `like_job'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.4ms | Allocations: 1507)
+
+
+  
+NoMethodError (undefined method `like' for nil:NilClass
+
+    job.like.push(current_user.id)
+       ^^^^^):
+  
+app/controllers/jobs_controller.rb:21:in `like_job'
+Started PATCH "/like_job/1" for 127.0.0.1 at 2024-02-09 05:11:08 +0000
+Processing by JobsController#like_job as */*
+  Parameters: {"name"=>"Add your name in the body", "ids"=>"1", "job"=>{"name"=>"Add your name in the body"}}
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:20:in `like_job'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 1.9ms | Allocations: 2222)
+
+
+  
+NoMethodError (undefined method `like' for nil:NilClass
+
+    job.like.push(current_user.id)
+       ^^^^^):
+  
+app/controllers/jobs_controller.rb:22:in `like_job'
+Started PATCH "/like_job/1" for 127.0.0.1 at 2024-02-09 05:12:25 +0000
+Processing by JobsController#like_job as */*
+  Parameters: {"name"=>"Add your name in the body", "ids"=>"1", "job"=>{"name"=>"Add your name in the body"}}
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:20:in `like_job'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 2.0ms | Allocations: 2220)
+
+
+  
+NoMethodError (undefined method `like' for nil:NilClass
+
+    job.like.push(current_user.id)
+       ^^^^^):
+  
+app/controllers/jobs_controller.rb:22:in `like_job'
+Started PATCH "/like_job/1" for 127.0.0.1 at 2024-02-09 05:13:15 +0000
+Processing by JobsController#like_job as */*
+  Parameters: {"name"=>"Add your name in the body", "ids"=>"1", "job"=>{"name"=>"Add your name in the body"}}
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:20:in `like_job'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 2.6ms | Allocations: 2186)
+
+
+  
+NoMethodError (undefined method `like' for nil:NilClass
+
+    job.like.push(current_user.id)
+       ^^^^^):
+  
+app/controllers/jobs_controller.rb:22:in `like_job'
+Started PATCH "/like_job/1" for 127.0.0.1 at 2024-02-09 05:13:58 +0000
+Processing by JobsController#like_job as */*
+  Parameters: {"name"=>"Add your name in the body", "ids"=>"1", "job"=>{"name"=>"Add your name in the body"}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 1.3ms | Allocations: 3107)
+
+
+  
+NameError (undefined local variable or method `job' for #<JobsController:0x0000000000c9e0>
+
+    job.like.push(current_user.id)
+    ^^^):
+  
+app/controllers/jobs_controller.rb:22:in `like_job'
+Started PATCH "/like_job/1" for 127.0.0.1 at 2024-02-09 05:15:03 +0000
+  
+SyntaxError (/Users/admin/Desktop/back-end/app/controllers/jobs_controller.rb:32: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/jobs_controller.rb:32: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/jobs_controller.rb:32: syntax error, unexpected end-of-input, expecting `end'
+Started PATCH "/like_job/1" for 127.0.0.1 at 2024-02-09 05:15:54 +0000
+Processing by JobsController#like_job as */*
+  Parameters: {"name"=>"Add your name in the body", "ids"=>"1", "job"=>{"name"=>"Add your name in the body"}}
+Completed 204 No Content in 1ms (ActiveRecord: 1.6ms | Allocations: 475)
+
+
+Started PATCH "/like_job/1" for 127.0.0.1 at 2024-02-09 05:16:39 +0000
+Processing by JobsController#like_job as */*
+  Parameters: {"name"=>"Add your name in the body", "ids"=>"1", "job"=>{"name"=>"Add your name in the body"}}
+Completed 204 No Content in 3ms (ActiveRecord: 1.5ms | Allocations: 456)
+
+
+Started PATCH "/like_job/1" for 127.0.0.1 at 2024-02-09 05:19:15 +0000
+Processing by JobsController#like_job as */*
+  Parameters: {"name"=>"Add your name in the body", "ids"=>"1", "job"=>{"name"=>"Add your name in the body"}}
+Completed 204 No Content in 1ms (ActiveRecord: 1.3ms | Allocations: 458)
+
+
+Started PATCH "/like_job/1" for 127.0.0.1 at 2024-02-09 05:20:30 +0000
+Processing by JobsController#like_job as */*
+  Parameters: {"name"=>"Add your name in the body", "ids"=>"1", "job"=>{"name"=>"Add your name in the body"}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 1.9ms | Allocations: 1520)
+
+
+  
+NoMethodError (undefined method `ids' for #<ActionController::Parameters {"name"=>"Add your name in the body"} permitted: true>
+
+    p "--------------------------------> #{job_params.ids}"
+                                                     ^^^^):
+  
+app/controllers/jobs_controller.rb:21:in `like_job'
+Started PATCH "/like_job/1" for 127.0.0.1 at 2024-02-09 05:21:12 +0000
+Processing by JobsController#like_job as */*
+  Parameters: {"name"=>"Add your name in the body", "ids"=>"1", "job"=>{"name"=>"Add your name in the body"}}
+Completed 204 No Content in 1ms (ActiveRecord: 1.5ms | Allocations: 462)
+
+
+Started PATCH "/like_job/1" for 127.0.0.1 at 2024-02-09 05:21:41 +0000
+Processing by JobsController#like_job as */*
+  Parameters: {"name"=>"Add your name in the body", "ids"=>"1", "job"=>{"name"=>"Add your name in the body"}}
+Completed 204 No Content in 1ms (ActiveRecord: 1.6ms | Allocations: 465)
+
+
+Started PATCH "/like_job/1" for 127.0.0.1 at 2024-02-09 05:28:54 +0000
+Processing by JobsController#like_job as */*
+  Parameters: {"name"=>"Add your name in the body", "ids"=>"1", "job"=>{"name"=>"Add your name in the body"}}
+Completed 204 No Content in 1ms (ActiveRecord: 46.7ms | Allocations: 456)
+
+
+Started PATCH "/like_job/2" for 127.0.0.1 at 2024-02-09 05:29:28 +0000
+Processing by JobsController#like_job as */*
+  Parameters: {"name"=>"Add your name in the body", "ids"=>"2", "job"=>{"name"=>"Add your name in the body"}}
+Completed 204 No Content in 2ms (ActiveRecord: 6.6ms | Allocations: 456)
+
+
+Started PATCH "/like_job/2" for 127.0.0.1 at 2024-02-09 05:34:05 +0000
+Processing by JobsController#like_job as */*
+  Parameters: {"name"=>"Add your name in the body", "ids"=>"2", "job"=>{"name"=>"Add your name in the body"}}
+Completed 204 No Content in 1ms (ActiveRecord: 1.2ms | Allocations: 453)
+
+
+Started PATCH "/like_job/2" for 127.0.0.1 at 2024-02-09 05:37:26 +0000
+Processing by JobsController#like_job as */*
+  Parameters: {"name"=>"Add your name in the body", "id"=>"2", "job"=>{"name"=>"Add your name in the body"}}
+Completed 204 No Content in 1ms (ActiveRecord: 1.8ms | Allocations: 452)
+
+
+Started PATCH "/like_job/2" for 127.0.0.1 at 2024-02-09 05:37:43 +0000
+Processing by JobsController#like_job as */*
+  Parameters: {"name"=>"Add your name in the body", "id"=>"2", "job"=>{"name"=>"Add your name in the body"}}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 94)
+
+
+Started PUT "/like_job/2" for 127.0.0.1 at 2024-02-09 05:38:42 +0000
+Processing by JobsController#like_job as */*
+  Parameters: {"name"=>"Add your name in the body", "id"=>"2", "job"=>{"name"=>"Add your name in the body"}}
+Completed 204 No Content in 1ms (ActiveRecord: 1.5ms | Allocations: 460)
+
+
+Started PATCH "/like_job/2" for 127.0.0.1 at 2024-02-09 05:44:12 +0000
+Processing by JobsController#like_job as */*
+  Parameters: {"name"=>"Add your name in the body", "id"=>"2", "job"=>{"name"=>"Add your name in the body"}}
+Completed 204 No Content in 1ms (ActiveRecord: 6.9ms | Allocations: 460)
+
+
+Started PATCH "/like_job/2" for 127.0.0.1 at 2024-02-09 05:44:26 +0000
+Processing by JobsController#like_job as */*
+  Parameters: {"name"=>"Add your name in the body", "id"=>"2", "job"=>{"name"=>"Add your name in the body"}}
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 94)
+
+
+Started PATCH "/like_job/2" for 127.0.0.1 at 2024-02-09 05:51:34 +0000
+Processing by JobsController#like_job as */*
+  Parameters: {"name"=>"Add your name in the body", "id"=>"2", "job"=>{"name"=>"Add your name in the body"}}
+Completed 204 No Content in 2ms (ActiveRecord: 5.5ms | Allocations: 452)
+
+
+Started PATCH "/like_job/2" for 127.0.0.1 at 2024-02-09 05:59:13 +0000
+Processing by JobsController#like_job as */*
+  Parameters: {"name"=>"Add your name in the body", "id"=>"2", "job"=>{"name"=>"Add your name in the body"}}
+Completed 204 No Content in 1ms (ActiveRecord: 5.6ms | Allocations: 394)
+
+
+Started POST "/signup" for 127.0.0.1 at 2024-02-09 06:00:48 +0000
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"name"=>"addo1", "email"=>"addo@gmail.com", "password"=>"[FILTERED]"}, "registration"=>{"user"=>{"name"=>"addo1", "email"=>"addo@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (4.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "addo@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "jti") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "addo@gmail.com"], ["encrypted_password", "$2a$12$NqX0n00KNw1oNIAt0GqRl.jMYOtj.AKiuFUh444UBXuGqpmzLRBuC"], ["created_at", "2024-02-09 06:00:49.419087"], ["updated_at", "2024-02-09 06:00:49.419087"], ["name", "addo1"], ["jti", "5f0e93c9-6cd4-4131-b6b7-7e007fe7019c"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 259ms (Views: 0.2ms | ActiveRecord: 12.9ms | Allocations: 12279)
+
+
+Started PATCH "/like_job/2" for 127.0.0.1 at 2024-02-09 06:01:19 +0000
+Processing by JobsController#like_job as */*
+  Parameters: {"name"=>"Add your name in the body", "id"=>"2", "job"=>{"name"=>"Add your name in the body"}}
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:22:in `like_job'
+Completed 404 Not Found in 4ms (ActiveRecord: 2.9ms | Allocations: 1166)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Job with 'id'=2):
+  
+app/controllers/jobs_controller.rb:22:in `like_job'
+Started PATCH "/like_job/1" for 127.0.0.1 at 2024-02-09 06:01:47 +0000
+Processing by JobsController#like_job as */*
+  Parameters: {"name"=>"Add your name in the body", "id"=>"1", "job"=>{"name"=>"Add your name in the body"}}
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:22:in `like_job'
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Job"], ["name", "poster"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:26:in `like_job'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Job"], ["name", "logo"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:26:in `like_job'
+Completed 200 OK in 18ms (Views: 7.9ms | ActiveRecord: 2.2ms | Allocations: 8065)
+
+
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 06:04:07 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"coolaaaa", "location"=>"turkey", "description"=>"what a cool job for a cool guy"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:16:in `create'
+  [1m[36mJob Create (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "location", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "coolaaaa"], ["location", "turkey"], ["description", "what a cool job for a cool guy"], ["created_at", "2024-02-09 06:04:07.632887"], ["updated_at", "2024-02-09 06:04:07.632887"]]
+  ↳ app/controllers/jobs_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (40.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:16:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Job"], ["name", "poster"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:18:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Job"], ["name", "logo"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:18:in `create'
+Completed 200 OK in 62ms (Views: 7.3ms | ActiveRecord: 44.7ms | Allocations: 10800)
+
+
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 06:05:05 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"proof", "location"=>"mali", "description"=>"I am gonna kick"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:16:in `create'
+  [1m[36mJob Create (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "location", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "proof"], ["location", "mali"], ["description", "I am gonna kick"], ["created_at", "2024-02-09 06:05:05.690750"], ["updated_at", "2024-02-09 06:05:05.690750"]]
+  ↳ app/controllers/jobs_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (6.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:16:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Job"], ["name", "poster"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:18:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Job"], ["name", "logo"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:18:in `create'
+Completed 200 OK in 14ms (Views: 3.1ms | ActiveRecord: 7.1ms | Allocations: 4386)
+
+
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 06:05:50 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"proof", "location"=>"mali", "description"=>"I am gonna kick"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:16:in `create'
+  [1m[36mJob Create (0.2ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "location", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "proof"], ["location", "mali"], ["description", "I am gonna kick"], ["created_at", "2024-02-09 06:05:50.809419"], ["updated_at", "2024-02-09 06:05:50.809419"]]
+  ↳ app/controllers/jobs_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:16:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Job"], ["name", "poster"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:18:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Job"], ["name", "logo"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:18:in `create'
+Completed 200 OK in 37ms (Views: 9.3ms | ActiveRecord: 7.6ms | Allocations: 10794)
+
+
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 06:13:48 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"proofxxx", "location"=>"mali", "description"=>"I am gonna kick"}}
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 48.1ms | Allocations: 9327)
+
+
+  
+NoMethodError (undefined method `user_signed_in?' for #<JobPolicy:0x000000010caf3c48 @user=nil, @job=#<Job id: nil, name: "proofxxx", location: "mali", description: "I am gonna kick", created_at: nil, updated_at: nil, like: []>>
+
+    user_signed_in?
+    ^^^^^^^^^^^^^^^):
+  
+app/policies/job_policy.rb:13:in `create?'
+app/controllers/jobs_controller.rb:16:in `create'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (66.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "flex_test_development"[0m
+  [1m[35m (38.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "flex_test_test"[0m
+  [1m[35m (121.5ms)[0m  [1m[35mCREATE DATABASE "flex_test_development" ENCODING = 'unicode'[0m
+  [1m[35m (74.3ms)[0m  [1m[35mCREATE DATABASE "flex_test_test" ENCODING = 'unicode'[0m
+  [1m[35m (48.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3190432722120052185)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20240208201834)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (24.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20240208201834"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddNameToUsers (20240208202352)
+  [1m[36mTRANSACTION (40.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "name" character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20240208202352"]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddAvatarToUsers (20240208202745)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "avatar" character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20240208202745"]]
+  [1m[36mTRANSACTION (40.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddJtiToUsers (20240208213535)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "jti" character varying NOT NULL[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_jti" ON "users" ("jti")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20240208213535"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateActiveStorageTables (20240208234955)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" bigserial primary key, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "service_name" character varying NOT NULL, "byte_size" bigint NOT NULL, "checksum" character varying NOT NULL, "created_at" timestamp NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key")[0m
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" bigserial primary key, "name" character varying NOT NULL, "record_type" character varying NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" timestamp NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id")[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "active_storage_variant_records" ("id" bigserial primary key, "blob_id" bigint NOT NULL, "variation_digest" character varying NOT NULL, CONSTRAINT "fk_rails_993965df05"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_variant_records_uniqueness" ON "active_storage_variant_records" ("blob_id", "variation_digest")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20240208234955"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateJobs (20240209000456)
+  [1m[36mTRANSACTION (41.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE "jobs" ("id" bigserial primary key, "user_id" bigint, "name" character varying, "location" character varying, "description" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_df6238c8a6"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE INDEX "index_jobs_on_user_id" ON "jobs" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20240209000456"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddLikeToJobs (20240209043321)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "jobs" ADD "like" integer[] DEFAULT '{}'[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20240209043321"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2024-02-09 06:23:20.464162"], ["updated_at", "2024-02-09 06:23:20.464162"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3190432722120052185)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 06:36:35 +0000
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ArgumentError (wrong number of arguments (given 2, expected 1)):
+  
+app/models/job.rb:4:in `<class:Job>'
+app/models/job.rb:3:in `<main>'
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 06:38:18 +0000
+  
+ArgumentError (wrong number of arguments (given 2, expected 1)):
+  
+app/models/job.rb:4:in `<class:Job>'
+app/models/job.rb:3:in `<main>'
+Started POST "/signup" for 127.0.0.1 at 2024-02-09 06:40:40 +0000
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"name"=>"addo1", "email"=>"addo@gmail.com", "password"=>"[FILTERED]"}, "registration"=>{"user"=>{"name"=>"addo1", "email"=>"addo@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "addo@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (8.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "jti") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "addo@gmail.com"], ["encrypted_password", "$2a$12$HOIVixyAdm/gLBGi8PjqVO6qWf4z6kEC6AATx4PlejewZB52bcIm."], ["created_at", "2024-02-09 06:40:40.631866"], ["updated_at", "2024-02-09 06:40:40.631866"], ["name", "addo1"], ["jti", "a505b9f7-978b-4bee-a4bb-db4e4f73e6bf"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 262ms (Views: 0.2ms | ActiveRecord: 18.2ms | Allocations: 11285)
+
+
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 06:41:28 +0000
+  
+ArgumentError (wrong number of arguments (given 2, expected 1)):
+  
+app/models/job.rb:4:in `<class:Job>'
+app/models/job.rb:3:in `<main>'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (184.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "flex_test_development"[0m
+  [1m[35m (83.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "flex_test_test"[0m
+  [1m[35m (72.4ms)[0m  [1m[35mCREATE DATABASE "flex_test_development" ENCODING = 'unicode'[0m
+  [1m[35m (69.5ms)[0m  [1m[35mCREATE DATABASE "flex_test_test" ENCODING = 'unicode'[0m
+  [1m[35m (47.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3190432722120052185)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20240208201834)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20240208201834"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddNameToUsers (20240208202352)
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "name" character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20240208202352"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddAvatarToUsers (20240208202745)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "avatar" character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20240208202745"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddJtiToUsers (20240208213535)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "jti" character varying NOT NULL[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_jti" ON "users" ("jti")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20240208213535"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateActiveStorageTables (20240208234955)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" bigserial primary key, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "service_name" character varying NOT NULL, "byte_size" bigint NOT NULL, "checksum" character varying NOT NULL, "created_at" timestamp NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key")[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" bigserial primary key, "name" character varying NOT NULL, "record_type" character varying NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" timestamp NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id")[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "active_storage_variant_records" ("id" bigserial primary key, "blob_id" bigint NOT NULL, "variation_digest" character varying NOT NULL, CONSTRAINT "fk_rails_993965df05"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_variant_records_uniqueness" ON "active_storage_variant_records" ("blob_id", "variation_digest")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20240208234955"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateJobs (20240209000456)
+  [1m[36mTRANSACTION (41.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "jobs" ("id" bigserial primary key, "name" character varying, "location" character varying, "description" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20240209000456"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddLikeToJobs (20240209043321)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "jobs" ADD "like" integer[] DEFAULT '{}'[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20240209043321"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2024-02-09 06:47:27.134111"], ["updated_at", "2024-02-09 06:47:27.134111"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3190432722120052185)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 06:47:43 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ArgumentError (wrong number of arguments (given 2, expected 1)):
+  
+app/models/job.rb:4:in `<class:Job>'
+app/models/job.rb:3:in `<main>'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+	"job":{
+        "name": "proofxxx",
+         "location": "mali",
+         "description": "I am gonna kick",
+        
+   }
+}
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 06:48:57 +0000
+Error occurred while parsing request parameters.
+Contents:
+
+{
+	"job":{
+        "name": "proofxxx",
+         "location": "mali",
+         "description": "I am gonna kick",
+        
+   }
+}
+Processing by JobsController#create as */*
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 494)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (859: unexpected token at '{
+	"job":{
+        "name": "proofxxx",
+         "location": "mali",
+         "description": "I am gonna kick",
+        
+   }
+}'):
+  
+app/controllers/jobs_controller.rb:34:in `job_params'
+app/controllers/jobs_controller.rb:16:in `create'
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 06:51:34 +0000
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Error occurred while parsing request parameters.
+Contents:
+
+{
+	"job":{
+        "name": "proofxxx",
+         "location": "mali",
+         "description": "I am gonna kick",
+        
+   }
+}
+Processing by JobsController#create as */*
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 487)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (859: unexpected token at '{
+	"job":{
+        "name": "proofxxx",
+         "location": "mali",
+         "description": "I am gonna kick",
+        
+   }
+}'):
+  
+app/controllers/jobs_controller.rb:34:in `job_params'
+app/controllers/jobs_controller.rb:16:in `create'
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 06:53:44 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"proofxxx", "location"=>"mali", "description"=>"I am gonna kick"}}
+Completed 422 Unprocessable Entity in 45ms (ActiveRecord: 5.5ms | Allocations: 7164)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/jobs_controller.rb:18:in `create'
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 06:54:10 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"proofxxx", "location"=>"mali", "description"=>"I am gonna kick", "user_id"=>1}}
+[31mUnpermitted parameter: :user_id[0m
+Completed 422 Unprocessable Entity in 4ms (ActiveRecord: 0.0ms | Allocations: 743)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/jobs_controller.rb:18:in `create'
+Started POST "/jobs" for 127.0.0.1 at 2024-02-09 06:54:36 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"name"=>"proofxxx", "location"=>"mali", "description"=>"I am gonna kick", "user_id"=>1}}
+[31mUnpermitted parameter: :user_id[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:18:in `create'
+  [1m[36mJob Create (3.1ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "location", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "proofxxx"], ["location", "mali"], ["description", "I am gonna kick"], ["created_at", "2024-02-09 06:54:36.417130"], ["updated_at", "2024-02-09 06:54:36.417130"]]
+  ↳ app/controllers/jobs_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (41.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:18:in `create'
+  [1m[36mActiveStorage::Attachment Load (1.9ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Job"], ["name", "poster"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:20:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Job"], ["name", "logo"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:20:in `create'
+Completed 200 OK in 76ms (Views: 10.6ms | ActiveRecord: 51.6ms | Allocations: 10983)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (65.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "flex_test_development"[0m
+  [1m[35m (42.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "flex_test_test"[0m
+  [1m[35m (184.8ms)[0m  [1m[35mCREATE DATABASE "flex_test_development" ENCODING = 'unicode'[0m
+  [1m[35m (97.5ms)[0m  [1m[35mCREATE DATABASE "flex_test_test" ENCODING = 'unicode'[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3190432722120052185)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20240208201834)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (24.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20240208201834"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddNameToUsers (20240208202352)
+  [1m[36mTRANSACTION (25.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "name" character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20240208202352"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddAvatarToUsers (20240208202745)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "avatar" character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20240208202745"]]
+  [1m[36mTRANSACTION (21.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddJtiToUsers (20240208213535)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "jti" character varying NOT NULL[0m
+  [1m[35m (22.9ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_jti" ON "users" ("jti")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20240208213535"]]
+  [1m[36mTRANSACTION (25.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateActiveStorageTables (20240208234955)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (23.7ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" bigserial primary key, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "service_name" character varying NOT NULL, "byte_size" bigint NOT NULL, "checksum" character varying NOT NULL, "created_at" timestamp NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key")[0m
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" bigserial primary key, "name" character varying NOT NULL, "record_type" character varying NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" timestamp NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id")[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "active_storage_variant_records" ("id" bigserial primary key, "blob_id" bigint NOT NULL, "variation_digest" character varying NOT NULL, CONSTRAINT "fk_rails_993965df05"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_variant_records_uniqueness" ON "active_storage_variant_records" ("blob_id", "variation_digest")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20240208234955"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateJobs (20240209000456)
+  [1m[36mTRANSACTION (41.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "jobs" ("id" bigserial primary key, "user_id" bigint, "name" character varying, "location" character varying, "description" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_df6238c8a6"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE INDEX "index_jobs_on_user_id" ON "jobs" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20240209000456"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddLikeToJobs (20240209043321)
+  [1m[36mTRANSACTION (25.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "jobs" ADD "like" integer[] DEFAULT '{}'[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20240209043321"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2024-02-09 07:08:47.601002"], ["updated_at", "2024-02-09 07:08:47.601002"]]
+  [1m[36mTRANSACTION (39.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (11.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(3190432722120052185)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
