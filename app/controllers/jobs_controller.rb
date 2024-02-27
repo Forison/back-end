@@ -17,9 +17,19 @@ class JobsController < ApplicationController
   def like_job
     job = Job.find(params[:id])
     authorize job
-    job.like.push(current_user)
-    response = JobService.new(job, 'Job liking')
-    render json: response.call
+    if job.like.include?(current_user.id)
+      job.like.delete(current_user.id)
+    else
+      job.like.push(current_user.id)
+    end
+    job.save!
+    render json: { has_like: job.like.include?(current_user.id) }
+  end
+
+  def favorite_job
+    job = Job.find(params[:id])
+    authorize job
+    render json: { has_like: job.like.include?(current_user.id) }
   end
 
   private
