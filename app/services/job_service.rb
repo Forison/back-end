@@ -13,7 +13,7 @@ class JobService
   def feedback(resource, message_subject)
     if resource.persisted?
       {
-        status: { 
+        status: {
           code: 200,
           message: "#{message_subject} was created successfully."
         }

@@ -14,8 +14,8 @@ module Users
         }
       else
         render json: {
-          status: { 
-            code: 422, 
+          status: {
+            code: 422,
             message: "User couldn't be created successfully. #{current_user.errors.full_messages.to_sentence}"
           }
         }

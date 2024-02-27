@@ -15,6 +15,7 @@ class JobPolicy
   def like_job?
     create? && @job.present?
   end
+
   def favorite_job?
     like_job?
   end
