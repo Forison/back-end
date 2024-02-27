@@ -5,16 +5,11 @@ class JobsController < ApplicationController
 
   def index
     jobs = Job.all
-    render json: {
-      status: { code: 200 },
-      data: JobSerializer.new(jobs)
-    }
+    render json: { data: JobSerializer.new(jobs) }
   end
 
   def create
-    job = current_user.jobs.build(job_params)
-    authorize job
-    job.save!
+    job = current_user.jobs.create(job_params)
     response = JobService.new(job, 'Job')
     render json: response.call
   end
@@ -30,6 +25,12 @@ class JobsController < ApplicationController
   private
 
   def job_params
-    params.require(:job).permit(:id, :name, :description, :location, :logo, :poster, :like, :user_id)
+    params.permit(
+      :id,
+      :name,
+      :description,
+      :location,
+      :poster
+    )
   end
 end
